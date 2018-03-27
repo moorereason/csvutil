@@ -53,11 +53,6 @@ func (m TextMarshaler) MarshalText() ([]byte, error) {
 	return []byte("textmarshaler"), nil
 }
 
-type CSVTextMarshaler struct {
-	CSVMarshaler
-	TextMarshaler
-}
-
 type TypeH struct {
 	Int     int         `csv:"int,omitempty"`
 	Int8    int8        `csv:"int8,omitempty"`

@@ -9,7 +9,7 @@ import (
 type Status uint8
 
 const (
-	Unknown = iota
+	_ = iota
 	Success
 	Failure
 )

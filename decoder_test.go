@@ -19,8 +19,6 @@ var BinaryLarge = bytes.Repeat([]byte("1"), 128*1024)
 
 var EncodedBinaryLarge = base64.StdEncoding.EncodeToString(BinaryLarge)
 
-type Float float64
-
 type Enum uint8
 
 const (
@@ -76,8 +74,6 @@ func (e *Embedded3) UnmarshalCSV(s []byte) error {
 func (e Embedded3) MarshalCSV() ([]byte, error) {
 	return json.Marshal(e)
 }
-
-type Embedded4 interface{}
 
 type Embedded5 struct {
 	Embedded6
